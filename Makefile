@@ -1,5 +1,6 @@
 export BIN_DIR=bin
-export STATIC_ROOT="/static"
+export STATIC_ROOT=/storage
+export PREFIX=/static
 export PORT=8000
 export IMAGE_NAME=freundallein/staticserv:latest
 

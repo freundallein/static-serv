@@ -15,7 +15,6 @@ RUN make build
 
 FROM scratch
 
-ENV PORT=7891
 
 COPY --from=intermediate /go/src/bin/staticserv /go/bin/staticserv
 COPY --from=intermediate /etc/passwd /etc/passwd

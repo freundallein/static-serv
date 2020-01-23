@@ -1,3 +1,34 @@
+# static-serv
+
+Static files http server.  
+
+Allows to serve application static files separately.  
+Or you can just serve static site.
+
+
+## Configuration
+Application supports configuration via environment variables:
+```
+export STATIC_ROOT=/storage
+export PREFIX=/static
+export PORT=8000
+```
+## Installation
+### With docker  
+```
+$> docker pull freundallein/staticserv:latest
+```
+### With source
+```
+$> git clone git@github.com:freundallein/static-serv.git
+$> cd static-serv
+$> make build
+```
+
+## Usage
+Docker-compose
+
+```
 version: "3.5"
 
 networks:
@@ -24,7 +55,7 @@ services:
       - network
     ports:
       - 127.0.0.1:80:80
-      - 8080:8080
+      - 127.0.0.1:8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
 
@@ -73,3 +104,13 @@ services:
 
 volumes:
     static-files:
+
+```
+
+All requests to `127.0.0.1/static/*` will be served by `staticserv` container, otherwise by `whoami`.
+
+You can mount docker volume or host here:
+```
+volumes:
+  - static-files:/storage
+```
