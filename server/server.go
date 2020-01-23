@@ -12,7 +12,7 @@ var (
 	ErrNoOptions = errors.New("no options provided")
 )
 
-// Options - fileserver parameteres
+// Options - fileserver parameters
 type Options struct {
 	Port    string
 	RootDir string

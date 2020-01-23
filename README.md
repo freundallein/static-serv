@@ -1,4 +1,6 @@
 # static-serv
+[![Build Status](https://travis-ci.org/freundallein/static-serv.svg?branch=master)](https://travis-ci.org/freundallein/static-serv)
+[![Go Report Card](https://goreportcard.com/badge/github.com/freundallein/static-serv)](https://goreportcard.com/report/github.com/freundallein/static-serv)
 
 Static files http server.  
 
