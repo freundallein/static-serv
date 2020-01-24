@@ -40,6 +40,7 @@ func (srv *Server) Run() error {
 	chain := MiddlewareChain(
 		fileserver,
 		RestrictListing,
+		Cache(60 * time.Second),  // Cached items expiration timeout
 		GetMethodOnly,
 		AccessLog,
 	)

@@ -13,6 +13,7 @@ services:
       - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
+      - "--metrics.prometheus=true"
 
       - "--serversTransport.forwardingTimeouts.dialTimeout=5s"
 
