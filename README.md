@@ -6,7 +6,7 @@ Static files http server.
 
 Allows to serve application static files separately.  
 Or you can just serve static site.
-
+Has simple caching^ resource expiration is 60 seconds, GC each 30 seconds.
 
 ## Configuration
 Application supports configuration via environment variables:
